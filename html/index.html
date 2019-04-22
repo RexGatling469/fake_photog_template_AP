@@ -1,0 +1,199 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Photography Template</title>
+      
+
+        <link rel="stylesheet" href="css/owlcarousel/owl.carousel.min.css">
+        <link rel="stylesheet" href="css/owlcarousel/owl.theme.default.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+    
+    </head>
+
+<body>
+    <!--Sites title and social media icons a the top of the Page-->
+<div class="mainTitle">
+<h1>Pictures of Paintings</h1>
+
+<div class="socialMediaIcons">
+
+  </div>
+
+  <!--Nav Bar Begins-->
+  <div class="nav" id="topNav">
+      <a href="index.html" class="active">Home</a>
+      <a href="fake_portfolio.html">Portfolio</a>
+      <a href="fake_reviews.html">Reviews</a>
+      <a href="#Contact">Contact</a>
+<!--Not sure about this javascript, but borrowing it from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_topnav  -->
+<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+          
+        </a>
+<!-- js borrowed. works? tbd-->
+<!--------END OF NAV BAR CODE---------------------------------------------->
+  </div>
+  </div>
+
+<div class="slideshow_inside">
+    <div class="fakeSlide fade">
+        <img src="images/painting2.jpg" style="width:100%">
+        <div class="text">Your Caption</div>
+    </div>
+</div>
+<!--slide two-->
+
+<div class="slideshow_inside">
+    <div class="fakeSlide fade">
+        <img src="images/painting4.jpg" style="width:100%">
+        <div class="text">Your Caption</div>
+    </div>
+</div>
+<!--slide 3-->
+
+<div class="slideshow_inside">
+    <div class="fakeSlide fade">
+        <img src="images/paintinglots.jpg" style="width:100%">
+        <div class="text">Your Caption</div>
+    </div>
+</div>
+<!--slide 4-->
+
+<div class="slideshow_inside">
+    <div class="fakeSlide fade">
+        <img src="images/starry_night.jpg" style="width:100%">
+        <div class="text">Your Caption</div>
+    </div>
+</div>
+
+    
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+      
+        </div>
+</div>
+
+<!--ARTIST SECTION OF THE PAGE BEGINS HERE---------------------------------------------------->
+
+<div class="fullBio_section">
+  <div class="BioPic">
+    <img src="images/photog.jpg">
+  </div>
+
+  <div class="BioText">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse aliquet nisl ut tincidunt aliquam. In hac habitasse platea dictumst. Pellentesque finibus neque auctor, pharetra tellus in, consequat diam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse metus felis, iaculis eget orci eu, placerat viverra quam. Praesent id nisl ornare, condimentum nunc sed, imperdiet eros. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc non diam scelerisque mi euismod convallis ac et mi. Mauris rutrum auctor sapien fermentum fermentum. Curabitur erat tellus, commodo vel felis ac, laoreet tristique orci. Proin vel est nulla. Quisque a venenatis purus. Donec in justo mi. Aenean et ligula urna. Donec vel varius erat. In hac habitasse platea dictumst.</p>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+//slideshow action/////////////////////////////////
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("fakeSlide");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--FAILED ATTEMPT AT OWL JS & JQ-------------------------------------------
+    <script src="js/jquery.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/owl.carousel.js"></script>-->
+</body>
+<footer>
+
+
+
+
+
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
