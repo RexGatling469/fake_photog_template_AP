@@ -1,0 +1,176 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Photography Template</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="javascript" href="js/template.js">
+
+<!---*BOOTSTRAP CDN-------------------------------->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<!---------------*end-------------------------->
+        
+
+        <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+    
+    </head>
+
+<body>
+
+
+    <!--Sites title and social media icons at the top of the Page-->
+<div class="mainTitle">
+<h1>Pictures of Paintings</h1>
+
+<div class="socialMediaIcons">
+
+  </div>
+
+  <!--Nav Bar Begins-->
+
+  <div class="nav" id="topNav">
+      <a href="index.html" class="active">Home</a>
+      <a href="#">Portfolio</a>
+      <a href="#">Contact</a>
+<!--Not sure about this javascript, but took it from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_topnav  -->
+<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+          
+        </a>
+    </div>
+  </div>
+
+<!------------------------------------------------------------------------------>
+<!--------END  NAV BAR/ TITLE CODE---------------------------------------------->
+<!------------------------------------------------------------------------------>
+<!---------------slide show gallery-------------------------------------------------->
+
+
+<div class="slideshow-container">
+
+        <div class="mySlides fade">
+           
+          <img src="images/paintinglots.jpg" style="width:100%">
+           
+        </div>
+        
+        <div class="mySlides fade">
+           
+          <img src="images/painting2.jpg" style="width:100%">
+          
+        </div>
+        
+        <div class="mySlides fade">
+           
+          <img src="images/painting4.jpg" style="width:100%">
+           
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+        
+        <script>
+                var slideIndex = 1;
+                showSlides(slideIndex);
+                
+                function plusSlides(n) {
+                  showSlides(slideIndex += n);
+                }
+                
+                function currentSlide(n) {
+                  showSlides(slideIndex = n);
+                }
+                
+                function showSlides(n) {
+                  var i;
+                  var slides = document.getElementsByClassName("mySlides");
+                  var dots = document.getElementsByClassName("dot");
+                  if (n > slides.length) {slideIndex = 1}    
+                  if (n < 1) {slideIndex = slides.length}
+                  for (i = 0; i < slides.length; i++) {
+                      slides[i].style.display = "none";  
+                  }
+                  for (i = 0; i < dots.length; i++) {
+                      dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";  
+                  dots[slideIndex-1].className += " active";
+                }
+                
+                </script>
+        
+
+
+<!--ARTIST BIO SECTION BEGINS---------------------------------------------------->
+
+<div class="fullBio_section">
+  <div class="BioPic">
+    <img src="images/photog.jpg">
+  </div>
+
+  <div class="BioText">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse aliquet nisl ut tincidunt aliquam. In hac habitasse platea dictumst. Pellentesque finibus neque auctor, pharetra tellus in, consequat diam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse metus felis, iaculis eget orci eu, placerat viverra quam. Praesent id nisl ornare, condimentum nunc sed, imperdiet eros. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc non diam scelerisque mi euismod convallis ac et mi. Mauris rutrum auctor sapien fermentum fermentum. Curabitur erat tellus, commodo vel felis ac, laoreet tristique orci. Proin vel est nulla. Quisque a venenatis purus. Donec in justo mi. Aenean et ligula urna. Donec vel varius erat. In hac habitasse platea dictumst.</p>
+  </div>
+</div>
+
+
+
+
+
+
+<!------MORE BOOTSTRAP CDN---------------------------->
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+<!--------end------------------------------------------>
+
+
+
+</body>
+<footer class="theFoot">
+<!---BOOTSTRAP CARD-------------------------------->
+
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+        </div>
+      </div>
+
+      <!---end--------------------------------BOOTSTRAP CARD-->
+
+
+
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
